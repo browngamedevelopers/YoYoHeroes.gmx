@@ -40,6 +40,9 @@ runSpeed = 10;
 jumpHeight = 32;//this is dummy data: I never worked out how to get the jumping just right,
 get_gravity_y = -50; //same here. This may be helpful.
 //mass ~= 51.2
+
+globalvar farthest;
+farthest = x;
 </string>
           </argument>
         </arguments>
@@ -210,6 +213,11 @@ if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord('W'))){
     if(canmove){
         physics_apply_force(phy_com_x, phy_com_y, 0, (phy_mass*(-600))); //guesstemated
     }
+}
+
+if (x &gt; farthest) {
+    global.farthest = x;
+    score = x;
 }
 
 

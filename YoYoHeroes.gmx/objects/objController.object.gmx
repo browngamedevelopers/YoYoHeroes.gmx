@@ -108,6 +108,11 @@ if (global.timer &gt;= 0.2) {
     draw_set_color(c_red);
     draw_text(250, 350, "Game Over!");
 }
+
+var score_x = 600;
+var score_y = 10
+
+draw_text(score_x, score_y, "Score: " + string(score));
 </string>
           </argument>
         </arguments>
