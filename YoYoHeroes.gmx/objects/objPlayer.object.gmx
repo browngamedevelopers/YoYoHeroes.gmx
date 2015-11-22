@@ -32,6 +32,9 @@ pushinbox = false;
 ropingthing = noone;
 pushingsomething = noone;
 
+respawn_x = x;
+respawn_y = y;
+
 runSpeed = 10;
 jumpHeight = 32;
 get_gravity_y = -50;
@@ -155,7 +158,13 @@ if(mouse_check_button(mb_right)){
 canmove = position_meeting(x-16,y+(sprite_get_height(0)+1)/2,objAllObjects) 
         || position_meeting(x+16,y+(sprite_get_height(0)+1)/2,objAllObjects)
         || position_meeting(x,y+(sprite_get_height(0)+1)/2,objAllObjects) ;
-//canmove = true;
+solidGround = position_meeting(x-16,y+(sprite_get_height(0)+1)/2,objStatic) 
+        &amp;&amp; position_meeting(x+16,y+(sprite_get_height(0)+1)/2,objStatic)
+        &amp;&amp; position_meeting(x,y+(sprite_get_height(0)+1)/2,objStatic) ;
+if (solidGround){
+    respawn_x = x;
+    respawn_y = y;
+}
         
 if(keyboard_check(vk_left) || keyboard_check(ord('A'))){
     if(canmove){
