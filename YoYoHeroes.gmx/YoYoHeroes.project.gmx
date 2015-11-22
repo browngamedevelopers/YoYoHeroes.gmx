@@ -22,6 +22,9 @@
     <script>scripts\sleep5.gml</script>
     <script>scripts\drawRope2.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\timerFont</font>
+  </fonts>
   <objects name="objects">
     <object>objects\objAllObjects</object>
     <object>objects\objTargetable</object>

@@ -74,8 +74,9 @@ alarm[0] = room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_color(c_white);
-draw_text(400,30, global.timer);
+            <string>draw_set_font(timerFont);
+draw_set_color(c_white);
+draw_text(500,20, global.timer);
 </string>
           </argument>
         </arguments>
