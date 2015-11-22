@@ -31,6 +31,7 @@
     <object>objects\objTarget</object>
     <object>objects\objPlayer</object>
     <object>objects\objPlayer2</object>
+    <object>objects\objController</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
