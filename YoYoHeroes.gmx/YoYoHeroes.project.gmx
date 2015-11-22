@@ -13,6 +13,7 @@
     <sprite>sprites\sprWall</sprite>
     <sprite>sprites\sprRope</sprite>
     <sprite>sprites\sprBlock1</sprite>
+    <sprite>sprites\sprTimeBonus</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,6 +33,7 @@
     <object>objects\objPlayer</object>
     <object>objects\objPlayer2</object>
     <object>objects\objController</object>
+    <object>objects\objTimeBonus</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
