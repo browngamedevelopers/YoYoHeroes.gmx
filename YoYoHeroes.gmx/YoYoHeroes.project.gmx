@@ -21,6 +21,8 @@
     <script>scripts\drawRope.gml</script>
     <script>scripts\sleep5.gml</script>
     <script>scripts\drawRope2.gml</script>
+    <script>scripts\block0.gml</script>
+    <script>scripts\placeBlocks.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\timerFont</font>
@@ -39,9 +41,11 @@
     <object>objects\objPlayer2</object>
     <object>objects\objController</object>
     <object>objects\objTimeBonus</object>
+    <object>objects\object11</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\roomOld</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

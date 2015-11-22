@@ -28,6 +28,8 @@
             <string>globalvar timer;
 global.timer = 100 - 0.01;
 alarm[0] = room_speed;
+
+placeBlocks();
 </string>
           </argument>
         </arguments>
