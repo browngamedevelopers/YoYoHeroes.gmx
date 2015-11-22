@@ -23,9 +23,7 @@
     <sprite>sprites\sprCrosshair</sprite>
     <sprite>sprites\sprCloud</sprite>
   </sprites>
-  <backgrounds name="background">
-    <background>bgMenu</background>
-  </backgrounds>
+  <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\drawRope.gml</script>
