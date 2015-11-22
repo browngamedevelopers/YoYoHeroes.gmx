@@ -24,6 +24,8 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\timerFont</font>
+    <font>fonts\fntTimer</font>
+    <font>fonts\fntGameOver</font>
   </fonts>
   <objects name="objects">
     <object>objects\objAllObjects</object>

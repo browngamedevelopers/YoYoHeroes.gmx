@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>globalvar timer;
-global.timer = 100;
+global.timer = 100 - 0.01;
 alarm[0] = room_speed;
 </string>
           </argument>
@@ -50,8 +50,8 @@ alarm[0] = room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.timer -= 1;
-alarm[0] = room_speed;
+            <string>global.timer -= 1/13;
+alarm[0] = room_speed/13;
 </string>
           </argument>
         </arguments>
@@ -74,9 +74,38 @@ alarm[0] = room_speed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(timerFont);
+            <string>draw_set_font(fntTimer);
 draw_set_color(c_white);
-draw_text(500,20, global.timer);
+var timer_x = 870;
+var timer_y = 10;
+if (global.timer &gt;= 0.2) {
+    if (global.timer &gt;= 60) {
+        if (global.timer &gt;= 600) {
+            if ((global.timer mod 60) &gt;= 10) {
+                draw_text(timer_x, timer_y, string(floor(global.timer / 60)) + ":" + string(global.timer mod 60));
+            } else {
+                draw_text(timer_x, timer_y, string(floor(global.timer / 60)) + ":0" + string(global.timer mod 60));
+            }
+        } else {
+            if ((global.timer mod 60) &gt;= 10) {
+                draw_text(timer_x, timer_y, "0" + string(floor(global.timer / 60)) + ":" + string(global.timer mod 60));
+            } else {
+                draw_text(timer_x, timer_y, "0" + string(floor(global.timer / 60)) + ":0" + string(global.timer mod 60));
+            }
+        }
+    } else {
+        if ((global.timer mod 60) &gt;= 10) {
+            draw_text(timer_x, timer_y, "00:" + string(global.timer mod 60));
+        } else {
+            draw_text(timer_x, timer_y, "00:0" + string(global.timer mod 60));
+        }
+    }
+} else {
+    draw_text(timer_x, timer_y, "00:00.00");
+    draw_set_font(fntGameOver);
+    draw_set_color(c_red);
+    draw_text(250, 350, "Game Over!");
+}
 </string>
           </argument>
         </arguments>
