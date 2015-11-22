@@ -32,10 +32,46 @@ pushinbox = false;
 ropingthing = noone;
 pushingsomething = noone;
 
+respawn_x = phy_position_x;
+respawn_y = phy_position_y;
+alarm[0] = 30 //this is the respawn information. See alarm 0.
+
 runSpeed = 10;
-jumpHeight = 32;
-get_gravity_y = -50;
+jumpHeight = 32;//this is dummy data: I never worked out how to get the jumping just right,
+get_gravity_y = -50; //same here. This may be helpful.
 //mass ~= 51.2
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>solidGround = position_meeting(x-16,y+(sprite_get_height(0)+1)/2,objStatic) 
+        &amp;&amp; position_meeting(x+16,y+(sprite_get_height(0)+1)/2,objStatic)
+        &amp;&amp; position_meeting(x,y+(sprite_get_height(0)+1)/2,objStatic) ;
+
+if (solidGround){
+    respawn_x = phy_position_x;
+    respawn_y = phy_position_y;
+}
+alarm[0]= 30; //every second, 
+//the player saves his current position if he is on solid ground.
 </string>
           </argument>
         </arguments>
@@ -155,7 +191,9 @@ if(mouse_check_button(mb_right)){
 canmove = position_meeting(x-16,y+(sprite_get_height(0)+1)/2,objAllObjects) 
         || position_meeting(x+16,y+(sprite_get_height(0)+1)/2,objAllObjects)
         || position_meeting(x,y+(sprite_get_height(0)+1)/2,objAllObjects) ;
-//canmove = true;
+
+
+
         
 if(keyboard_check(vk_left) || keyboard_check(ord('A'))){
     if(canmove){
@@ -175,6 +213,51 @@ if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord('W'))){
 }
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="objCloud">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>cloud interaction</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>phy_position_x = respawn_x;
+phy_position_y = respawn_y;
+//reset back to the last area of solid ground
 </string>
           </argument>
         </arguments>

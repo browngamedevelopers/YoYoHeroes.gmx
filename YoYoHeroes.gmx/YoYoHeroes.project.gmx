@@ -6,6 +6,12 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="buttons">
+      <sprite>sprites\sprButtonPlayGame</sprite>
+      <sprite>sprites\sprButtonHowToPlay</sprite>
+      <sprite>sprites\sprButtonHighScore</sprite>
+      <sprite>sprites\sprButtonPlayerSelect</sprite>
+    </sprites>
     <sprite>sprites\sprBox</sprite>
     <sprite>sprites\sprTarget</sprite>
     <sprite>sprites\sprPlayer2</sprite>
@@ -14,8 +20,12 @@
     <sprite>sprites\sprRope</sprite>
     <sprite>sprites\sprBlock1</sprite>
     <sprite>sprites\sprTimeBonus</sprite>
+    <sprite>sprites\sprCrosshair</sprite>
+    <sprite>sprites\sprCloud</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>bgMenu</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\drawRope.gml</script>
@@ -30,6 +40,12 @@
     <font>fonts\fntGameOver</font>
   </fonts>
   <objects name="objects">
+    <objects name="buttons">
+      <object>objects\objButtonPlayGame</object>
+      <object>objects\objButtonPlayerSelect</object>
+      <object>objects\objButtonHowToPlay</object>
+      <object>objects\objButtonHighScore</object>
+    </objects>
     <object>objects\objAllObjects</object>
     <object>objects\objTargetable</object>
     <object>objects\objDynamic</object>
@@ -42,8 +58,10 @@
     <object>objects\objController</object>
     <object>objects\objTimeBonus</object>
     <object>objects\object11</object>
+    <object>objects\objCloud</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\roomMenu</room>
     <room>rooms\room0</room>
     <room>rooms\roomOld</room>
   </rooms>
