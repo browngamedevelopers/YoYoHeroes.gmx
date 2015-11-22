@@ -168,6 +168,7 @@
     <instance objName="objTimeBonus" x="256" y="224" name="inst_A45948C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTimeBonus" x="656" y="368" name="inst_677025D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTimeBonus" x="912" y="304" name="inst_CFC8558F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objCloud" x="544" y="368" name="inst_4A487995" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
