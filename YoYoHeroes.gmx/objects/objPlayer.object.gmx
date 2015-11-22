@@ -31,6 +31,11 @@ ropingbox = false;
 pushinbox = false;
 ropingthing = noone;
 pushingsomething = noone;
+
+runSpeed = 10;
+jumpHeight = 32;
+get_gravity_y = -50;
+//mass ~= 51.2
 </string>
           </argument>
         </arguments>
@@ -147,25 +152,25 @@ if(mouse_check_button(mb_right)){
         || position_meeting(x+16,y+32,objStatic) || position_meeting(x+16,y+32,objDynamic) 
         || position_meeting(x,y+32,objStatic) || position_meeting(x,y+32,objDynamic);*/
         
-canmove = position_meeting(x-16,y+32,objAllObjects) 
-        || position_meeting(x+16,y+32,objAllObjects)
-        || position_meeting(x,y+32,objAllObjects) ;
+canmove = position_meeting(x-16,y+(sprite_get_height(0)+1)/2,objAllObjects) 
+        || position_meeting(x+16,y+(sprite_get_height(0)+1)/2,objAllObjects)
+        || position_meeting(x,y+(sprite_get_height(0)+1)/2,objAllObjects) ;
 //canmove = true;
         
 if(keyboard_check(vk_left) || keyboard_check(ord('A'))){
-    //if(canmove){
-        physics_apply_force(phy_com_x, phy_com_y, -90, 0);
-    //}
+    if(canmove){
+        phy_speed_x = -(runSpeed); //note that this will fail on a moving platform
+    }
 }
 
 if(keyboard_check(vk_right) || keyboard_check(ord('D'))){
-    //if(canmove){
-        physics_apply_force(phy_com_x, phy_com_y, 90, 0);
-    //}
+    if(canmove){
+        phy_speed_x = runSpeed; //see above
+    }
 }
 if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord('W'))){
     if(canmove){
-        physics_apply_force(phy_com_x, phy_com_y, 0, -600);
+        physics_apply_force(phy_com_x, phy_com_y, 0, (phy_mass*(-600))); //guesstemated
     }
 }
 
