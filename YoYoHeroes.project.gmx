@@ -9,6 +9,7 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="buttons">
+      <sprite>sprites\sprMenu</sprite>
       <sprite>sprites\sprButtonPlayGame</sprite>
       <sprite>sprites\sprButtonHowToPlay</sprite>
       <sprite>sprites\sprButtonHighScore</sprite>
@@ -17,17 +18,21 @@
     <sprite>sprites\sprBox</sprite>
     <sprite>sprites\sprTarget</sprite>
     <sprite>sprites\sprPlayer2</sprite>
-    <sprite>sprites\sprBall</sprite>
     <sprite>sprites\sprWall</sprite>
     <sprite>sprites\sprRope</sprite>
-    <sprite>sprites\sprBlock1</sprite>
+    <sprite>sprites\sprBluePlayer</sprite>
+    <sprite>sprites\sprGreenPlayer</sprite>
+    <sprite>sprites\sprYellowPlayer</sprite>
     <sprite>sprites\sprTimeBonus</sprite>
     <sprite>sprites\sprCrosshair</sprite>
     <sprite>sprites\sprCloud</sprite>
     <sprite>sprites\sprYoyo</sprite>
     <sprite>sprites\sptGas</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background1</background>
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\drawRope.gml</script>
@@ -39,9 +44,6 @@
     <script>scripts\placeBlocks.gml</script>
     <script>scripts\shootYoyo.gml</script>
     <script>scripts\placeBlock.gml</script>
-    <script>scripts\block0.gml</script>
-    <script>scripts\block1.gml</script>
-    <script>scripts\block2.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\timerFont</font>
@@ -50,6 +52,7 @@
   </fonts>
   <objects name="objects">
     <objects name="buttons">
+      <object>objects\objMenu</object>
       <object>objects\objButtonPlayGame</object>
       <object>objects\objButtonPlayerSelect</object>
       <object>objects\objButtonHowToPlay</object>
@@ -62,22 +65,22 @@
     <object>objects\objWall</object>
     <object>objects\objTarget</object>
     <object>objects\objPlayer</object>
-    <object>objects\objPlayer2</object>
     <object>objects\objController</object>
     <object>objects\objTimeBonus</object>
-    <object>objects\object11</object>
     <object>objects\objCloud</object>
     <object>objects\objYoyo</object>
     <object>objects\objNonTargatable</object>
     <object>objects\objGas</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room3</room>
     <room>rooms\roomMenu</room>
     <room>rooms\room0</room>
     <room>rooms\roomOld</room>
   </rooms>
-  <constants number="4">
-    <constant name="ROOM_GRAVITY">20</constant>
+  <constants number="5">
+    <constant name="PLAYER_SPEED">50</constant>
+    <constant name="ROOM_GRAVITY">40</constant>
     <constant name="EPSILON_YOYO_PLAYER">1</constant>
     <constant name="YOYO_SPEED">16</constant>
     <constant name="YOYO_MAX_LENGTH">500</constant>
