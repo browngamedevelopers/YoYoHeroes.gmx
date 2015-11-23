@@ -32,6 +32,8 @@
     <script>scripts\sleep5.gml</script>
     <script>scripts\drawRope2.gml</script>
     <script>scripts\block0.gml</script>
+    <script>scripts\block1.gml</script>
+    <script>scripts\block2.gml</script>
     <script>scripts\placeBlocks.gml</script>
     <script>scripts\shootYoyo.gml</script>
   </scripts>
