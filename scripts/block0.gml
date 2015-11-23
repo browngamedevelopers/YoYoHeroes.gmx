@@ -13,6 +13,8 @@ instance_create(xOffset, 550, objWall);
 instance_create(xOffset + 32, 550, objWall);
 instance_create(xOffset + 64, 550, objWall);
 
-instance_create(xOffset, 550, objWall);
-instance_create(xOffset + 32, 550, objWall);
-instance_create(xOffset + 64, 550, objWall);
+instance_create(xOffset, 500, objWall);
+instance_create(xOffset + 32, 500, objWall);
+instance_create(xOffset + 64, 500, objWall);
+
+return 500;

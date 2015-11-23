@@ -1,4 +1,5 @@
 var xOffset = argument0;
+<<<<<<< HEAD
 yOffset = 500;
 blockWidth = 32;
 blockHeight = 32;
@@ -24,3 +25,15 @@ instance_create(xOffset + blockWidth * 21, yOffset - 400, objCloud);
 
 instance_create(xOffset + blockWidth * 15, yOffset - 550, objTarget);
 instance_create(xOffset + blockWidth * 19, yOffset - 550, objTarget);
+=======
+
+instance_create(xOffset, 400, objCloud);
+
+instance_create(xOffset, 350, objCloud);
+
+instance_create(xOffset, 300, objCloud);
+
+return 500;
+
+
+>>>>>>> aa8d48bba74021dfcf9ee17ef9bd954fb28af818

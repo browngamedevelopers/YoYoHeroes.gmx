@@ -29,7 +29,11 @@
 global.timer = 100 - 0.01;
 alarm[0] = room_speed;
 
-placeBlocks();
+var rw = 5000;
+var xOffset = 32;
+while (rw &gt; xOffset) {
+    xOffset += placeBlock(xOffset);
+}
 </string>
           </argument>
         </arguments>

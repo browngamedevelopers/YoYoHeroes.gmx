@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="buttons">
       <sprite>sprites\sprButtonPlayGame</sprite>
@@ -36,6 +38,10 @@
     <script>scripts\block2.gml</script>
     <script>scripts\placeBlocks.gml</script>
     <script>scripts\shootYoyo.gml</script>
+    <script>scripts\placeBlock.gml</script>
+    <script>scripts\block0.gml</script>
+    <script>scripts\block1.gml</script>
+    <script>scripts\block2.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\timerFont</font>
