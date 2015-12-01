@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,15 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar timer;
-global.timer = 100 - 0.01;
-alarm[0] = room_speed;
-
-var rw = 5000;
+            <string>alarm[0] = room_speed;
+var rw = room_width - sprite_get_width(sprBuilding);
 var xOffset = 32;
 while (rw &gt; xOffset) {
     xOffset += placeBlock(xOffset);
 }
+instance_create(xOffset,250,objTimeBonus);
+instance_create(0,0,objCursor);
+
+font = font_add("5x5_pixel.ttf",32,0,0,32,128);
 </string>
           </argument>
         </arguments>
@@ -63,6 +64,29 @@ alarm[0] = room_speed/13;
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.timer = 100 - .01;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -80,7 +104,8 @@ alarm[0] = room_speed/13;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(fntTimer);
+            <string>///Draw Timer and Score
+draw_set_font(font);
 draw_set_color(c_white);
 var timer_x = 870;
 var timer_y = 10;
@@ -117,6 +142,32 @@ var score_x = 600;
 var score_y = 10
 
 draw_text(score_x, score_y, "Score: " + string(score));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Background Movement Code
+player = instance_find(objPlayer,0);
+draw_background_tiled ( background1, view_xview[view_current] - player.x/10 , 0);
+
 </string>
           </argument>
         </arguments>

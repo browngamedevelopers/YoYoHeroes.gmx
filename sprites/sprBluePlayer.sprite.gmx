@@ -2,15 +2,15 @@
 <sprite>
   <type>0</type>
   <xorig>52</xorig>
-  <yorigin>54</yorigin>
-  <colkind>1</colkind>
+  <yorigin>51</yorigin>
+  <colkind>0</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>0</sepmasks>
+  <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>103</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>108</bbox_bottom>
+  <bbox_bottom>118</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>104</width>
-  <height>109</height>
+  <height>119</height>
   <frames>
     <frame index="0">images\sprBluePlayer_0.png</frame>
     <frame index="1">images\sprBluePlayer_1.png</frame>
@@ -33,5 +33,10 @@
     <frame index="10">images\sprBluePlayer_10.png</frame>
     <frame index="11">images\sprBluePlayer_11.png</frame>
     <frame index="12">images\sprBluePlayer_12.png</frame>
+    <frame index="13">images\sprBluePlayer_13.png</frame>
+    <frame index="14">images\sprBluePlayer_14.png</frame>
+    <frame index="15">images\sprBluePlayer_15.png</frame>
+    <frame index="16">images\sprBluePlayer_16.png</frame>
+    <frame index="17">images\sprBluePlayer_17.png</frame>
   </frames>
 </sprite>

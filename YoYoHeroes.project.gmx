@@ -3,10 +3,27 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>5x5_pixel.ttf</name>
+      <exists>-1</exists>
+      <size>8848</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>5x5_pixel.ttf</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
-  <sounds name="sound">
-    <sound>sound\sound0</sound>
-  </sounds>
+  <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="buttons">
       <sprite>sprites\sprMenu</sprite>
@@ -15,6 +32,10 @@
       <sprite>sprites\sprButtonHighScore</sprite>
       <sprite>sprites\sprButtonPlayerSelect</sprite>
     </sprites>
+    <sprite>sprites\sprPipe</sprite>
+    <sprite>sprites\sprLamp</sprite>
+    <sprite>sprites\sprPost</sprite>
+    <sprite>sprites\sprBuilding</sprite>
     <sprite>sprites\sprBox</sprite>
     <sprite>sprites\sprTarget</sprite>
     <sprite>sprites\sprPlayer2</sprite>
@@ -27,6 +48,7 @@
     <sprite>sprites\sprCrosshair</sprite>
     <sprite>sprites\sprCloud</sprite>
     <sprite>sprites\sprYoyo</sprite>
+    <sprite>sprites\nosprite</sprite>
     <sprite>sprites\sptGas</sprite>
   </sprites>
   <backgrounds name="background">
@@ -38,6 +60,7 @@
     <script>scripts\drawRope.gml</script>
     <script>scripts\sleep5.gml</script>
     <script>scripts\drawRope2.gml</script>
+    <script>scripts\createLamp.gml</script>
     <script>scripts\block0.gml</script>
     <script>scripts\block1.gml</script>
     <script>scripts\block2.gml</script>
@@ -58,6 +81,10 @@
       <object>objects\objButtonHowToPlay</object>
       <object>objects\objButtonHighScore</object>
     </objects>
+    <object>objects\objCursor</object>
+    <object>objects\objLamp</object>
+    <object>objects\objPost</object>
+    <object>objects\objBuilding</object>
     <object>objects\objAllObjects</object>
     <object>objects\objTargetable</object>
     <object>objects\objStatic</object>
@@ -74,15 +101,16 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room3</room>
-    <room>rooms\roomMenu</room>
     <room>rooms\room0</room>
+    <room>rooms\roomMenu</room>
     <room>rooms\roomOld</room>
   </rooms>
-  <constants number="5">
-    <constant name="PLAYER_SPEED">50</constant>
-    <constant name="ROOM_GRAVITY">40</constant>
-    <constant name="EPSILON_YOYO_PLAYER">1</constant>
-    <constant name="YOYO_SPEED">16</constant>
+  <constants number="6">
+    <constant name="PLAYER_JUMP">20</constant>
+    <constant name="PLAYER_SPEED">20</constant>
+    <constant name="ROOM_GRAVITY">20</constant>
+    <constant name="EPSILON_YOYO_PLAYER">10</constant>
+    <constant name="YOYO_SPEED">40</constant>
     <constant name="YOYO_MAX_LENGTH">500</constant>
   </constants>
   <help>

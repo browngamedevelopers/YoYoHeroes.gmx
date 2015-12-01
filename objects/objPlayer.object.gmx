@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>globalvar farthest;
-farthest = x;
+global.farthest = x;
 </string>
           </argument>
         </arguments>
@@ -47,13 +47,9 @@ farthest = x;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>physics_world_gravity(0, 0);
+            <string>//physics_world_gravity(0, 0);
 phy_fixed_rotation = true;
-ropingwall = false;
-ropingbox = false;
-pushinbox = false;
-ropingthing = noone;
-pushingsomething = noone;
+
 </string>
           </argument>
         </arguments>
@@ -78,6 +74,7 @@ pushingsomething = noone;
 image_speed = .2;
 imagestart = 0;
 imageend = 1;
+sticking = 0;
 </string>
           </argument>
         </arguments>
@@ -102,76 +99,51 @@ imageend = 1;
             <kind>1</kind>
             <string>
 
-if(mouse_check_button(mb_left)){
-    shootYoyo(mouse_x, mouse_y);
+if (!sticking){
+    imagestart = 0;
+    imageend = 1;
 }
+        
+var canmove = position_meeting(x-sprite_width/2,y+sprite_height/2 + 8,objAllObjects) 
+        || position_meeting(x+sprite_width/2,y+sprite_height/2 + 8,objAllObjects)
+        || position_meeting(x,y+sprite_height/2 + 8,objAllObjects) ;
 
-if(mouse_check_button(mb_right)){
-    if(pushingthing == noone){
-        thing = collision_line(x,y,mouse_x,mouse_y,objBox,false,true);
-    }else {
-        thing = pushingthing;
-    }
-    if(thing != noone ) {
-        pushingbox = true;
-        pushingthing = thing;
-        with(thing){
-            phy_speed_x = lengthdir_x(-10, point_direction(x,y,other.x,other.y));
-            phy_speed_y = lengthdir_y(-10, point_direction(x,y,other.x,other.y));
-        }
-    } else {
-        pushingbox = false;
-    }
-}else {
-    pushingthing = noone;
-    pushingbox = false;
-}
-/*canmove = position_meeting(x-16,y+32,objStatic) || position_meeting(x-16,y+32,objDynamic)
-        || position_meeting(x+16,y+32,objStatic) || position_meeting(x+16,y+32,objDynamic) 
-        || position_meeting(x,y+32,objStatic) || position_meeting(x,y+32,objDynamic);*/
-        
-        
-imagestart = 0;
-imageend = 1;
-//phy_speed_x = 0;
-//phy_speed_y = 0;
-        
-canmove = position_meeting(x-16,y+sprite_height/2+8,objAllObjects) 
-        || position_meeting(x+16,y+sprite_height/2+8,objAllObjects)
-        || position_meeting(x,y+sprite_height/2+8,objAllObjects) ;
-//canmove = true;
-        
 if(keyboard_check(vk_left) || keyboard_check(ord('A'))){
+    image_xscale = -1;
     if(canmove){
-    imagestart = 1;
-    imageend = 7;
-        image_xscale = -1*abs(image_xscale);
+        imagestart = 1;
+        imageend = 7;
         phy_speed_x  = -PLAYER_SPEED;
     }
 }
-
 if(keyboard_check(vk_right) || keyboard_check(ord('D'))){
+        image_xscale = 1;
     if(canmove){
-    imagestart = 1;
-    imageend = 7;
-        image_xscale = abs(image_xscale);
+        imagestart = 1;
+        imageend = 7;
         phy_speed_x  = PLAYER_SPEED;
     }
+}else if (canmove) {
+    //phy_speed_x = 0;
 }
 if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord('W'))){
-show_debug_message("prseeed");
     if(canmove){
-        physics_apply_force(phy_com_x, phy_com_y, 0, -(600*phy_mass) -(phy_speed * 100));
-        show_debug_message("canjump");
+        phy_speed_y = -1 * PLAYER_JUMP;
     }
 }
+physics_apply_force(phy_com_x, phy_com_y, 0, ROOM_GRAVITY*phy_mass);
 
-
-physics_apply_force(phy_com_x, phy_com_y, 0, ROOM_GRAVITY*phy_mass)
 if(canmove){
-    phy_speed_x -= sign(phy_speed_x)*0.5;
+    //on ground
+    //show_debug_message("ground");
+    if(abs(phy_speed_x) &lt; 1){
+       phy_speed_x = 0;
+    } else {
+        phy_speed_x -= sign(phy_speed_x)*0.5;
+    }
 }else {
-    phy_speed_x -= sign(phy_speed_x)*0.1;
+    //in air
+    //show_debug_message("air");
 }
 
 if(phy_speed_y &gt; 0){
@@ -179,20 +151,33 @@ if(phy_speed_y &gt; 0){
     imagestart = 7;
     imageend = 10;
 }else if (phy_speed_y &lt;-.1){
+    //jumping
     imagestart = 1;
     imageend = 1;
 }
-
+if (x &gt; global.farthest){
+    score = x;
+    global.farthest = x;
+}
+if(phy_speed_x &gt; 1){
+    image_xscale = 1;
+}
+if(phy_speed_x &lt; -1){
+    image_xscale = -1;
+}
+if(mouse_check_button(mb_left)){
+    imagestart = 14;
+    imageend = 15;
+    shootYoyo(mouse_x, mouse_y);
+}
 image_index = max(imagestart, image_index mod imageend);
-
-
 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objAllObjects">
+    <event eventtype="4" ename="objNonTargatable">
       <action>
         <libid>1</libid>
         <id>605</id>
@@ -210,32 +195,6 @@ image_index = max(imagestart, image_index mod imageend);
           <argument>
             <kind>1</kind>
             <string>Collision</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_self();
-//thing = collision_line(x,y,mouse_x,mouse_y,objAllObjects,false,true);
-cursor_sprite = sprCrosshair;
-
-</string>
           </argument>
         </arguments>
       </action>
@@ -265,13 +224,13 @@ cursor_sprite = sprCrosshair;
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>10</PhysicsObjectFriction>
+  <PhysicsObjectFriction>1</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>64,112</point>
-    <point>16,112</point>
-    <point>16,0</point>
-    <point>64,0</point>
+    <point>80,118</point>
+    <point>32,118</point>
+    <point>32,0</point>
+    <point>80,0</point>
   </PhysicsShapePoints>
 </object>

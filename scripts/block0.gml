@@ -3,18 +3,28 @@
 ---
 ---
 */
+
 var xOffset = argument0;
+//var yOffset = argument1;
+yOffset = 300;
+var buildwidth = 0;
+building = instance_create(xOffset, yOffset, objBuilding);
 
-instance_create(xOffset, 600, objWall);
-instance_create(xOffset + 32, 600, objWall);
-instance_create(xOffset + 64, 600, objWall);
+switch(building.image_index){
+    case 0: buildwidth = 640;
+        break;
+    case 1: buildwidth = 670;
+        break;
+    case 2: buildwidth = 795;
+    break;
+    case 3: buildwidth = 453;
+    break;
+}
 
-instance_create(xOffset, 550, objWall);
-instance_create(xOffset + 32, 550, objWall);
-instance_create(xOffset + 64, 550, objWall);
+w=0;
+while(w< buildwidth -16){
+    wall = instance_create(xOffset + w, yOffset, objWall);
+    w+=wall.sprite_width;
+}
 
-instance_create(xOffset, 500, objWall);
-instance_create(xOffset + 32, 500, objWall);
-instance_create(xOffset + 64, 500, objWall);
-
-return 500;
+return buildwidth;

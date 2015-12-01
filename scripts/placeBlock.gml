@@ -1,5 +1,5 @@
 var offset = argument0;
-var block = irandom(1);
+var block = irandom(0);
 switch(block) {
     case 0:
         return block0(offset)

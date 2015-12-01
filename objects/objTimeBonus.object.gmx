@@ -53,12 +53,7 @@ image_speed = 0.1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//image_index = spritenum + ((image_index + 1)mod 2);
-//show_debug_message(string(image_index) + " " + string((image_index + 1 )mod 2));
-
-//image_index = max(imagestart, image_index mod imageend);
-show_debug_message(spritenum);
-show_debug_message(image_index);
+            <string>//Loop chosen sprite
 if(image_index &gt;= spritenum + 2){
     image_index = spritenum;
 }
@@ -85,6 +80,7 @@ if(image_index &gt;= spritenum + 2){
           <argument>
             <kind>1</kind>
             <string>global.timer += 10;
+room_restart();
 instance_destroy();
 </string>
           </argument>
