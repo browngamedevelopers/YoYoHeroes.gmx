@@ -143,12 +143,18 @@ draw_text(score_x, score_y, "Score: " + string(score));
             <kind>1</kind>
             <string>///Background Movement Code
 player = instance_find(objPlayer,0);
+<<<<<<< HEAD
+draw_background_tiled_ext( background1, view_xview[view_current] - player.x/10 
+, view_yview[view_current], view_hview[view_current] /background_height[background1]
+, view_hview[view_current] /background_height[background1], c_white, 1);
+=======
 draw_background_tiled_ext( background1, view_xview[view_current] - player.x/10 , 
 view_yview[view_current], view_hview[view_current] /background_height[background1]
 , view_hview[view_current] /background_height[background1], c_white, 1);
 
 //background_yscale[background1] = view_hview[view_current] /background_height[background1]
 //show_debug_message(view_hview[view_current] /background_height[background1]);
+>>>>>>> 8d35d3b539bcb6bb6f8b5c0b21c7fc67724b8cd4
 
 </string>
           </argument>

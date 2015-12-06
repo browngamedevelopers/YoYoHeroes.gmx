@@ -103,10 +103,11 @@ if (!sticking){
     imagestart = 0;
     imageend = 1;
 }
+
         
-var canmove = position_meeting(x-sprite_width/2,y+sprite_height/2 + 8,objAllObjects) 
-        || position_meeting(x+sprite_width/2,y+sprite_height/2 + 8,objAllObjects)
-        || position_meeting(x,y+sprite_height/2 + 8,objAllObjects) ;
+var canmove = position_meeting(bbox_right,y + sprite_height/2 + 8,objAllObjects) 
+        || position_meeting(bbox_left,y + sprite_height/2 + 8,objAllObjects)
+        || position_meeting(x,y + sprite_height/2 + 8,objAllObjects) ;
 
 if(keyboard_check(vk_left) || keyboard_check(ord('A'))){
     image_xscale = -1;
@@ -255,8 +256,8 @@ image_index = max(imagestart, image_index mod imageend);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>80,118</point>
-    <point>32,118</point>
+    <point>80,112</point>
+    <point>32,112</point>
     <point>32,0</point>
     <point>80,0</point>
   </PhysicsShapePoints>
