@@ -50,6 +50,7 @@
     <sprite>sprites\sprYoyo</sprite>
     <sprite>sprites\nosprite</sprite>
     <sprite>sprites\sptGas</sprite>
+    <sprite>sprites\sprBlueTarget</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -83,6 +84,7 @@
     </objects>
     <object>objects\objCursor</object>
     <object>objects\objLamp</object>
+    <object>objects\objBlueTarget</object>
     <object>objects\objPost</object>
     <object>objects\objBuilding</object>
     <object>objects\objAllObjects</object>
