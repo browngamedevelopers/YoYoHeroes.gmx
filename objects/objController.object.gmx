@@ -26,12 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>alarm[0] = room_speed;
-var rw = room_width - sprite_get_width(sprBuilding);
+/*var rw = room_width - sprite_get_width(sprBuilding);
 var xOffset = 32;
 while (rw &gt; xOffset) {
     xOffset += placeBlock(xOffset);
 }
-instance_create(xOffset,250,objTimeBonus);
+instance_create(xOffset,250,objTimeBonus);*/
 instance_create(0,0,objCursor);
 
 font = font_add("5x5_pixel.ttf",32,0,0,32,128);

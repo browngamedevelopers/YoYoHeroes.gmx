@@ -40,6 +40,7 @@
     <sprite>sprites\sprTarget</sprite>
     <sprite>sprites\sprPlayer2</sprite>
     <sprite>sprites\sprWall</sprite>
+    <sprite>sprites\sprBlueBlock</sprite>
     <sprite>sprites\sprRope</sprite>
     <sprite>sprites\sprBluePlayer</sprite>
     <sprite>sprites\sprGreenPlayer</sprite>
@@ -85,6 +86,7 @@
     <object>objects\objCursor</object>
     <object>objects\objLamp</object>
     <object>objects\objBlueTarget</object>
+    <object>objects\objBlueBlock</object>
     <object>objects\objPost</object>
     <object>objects\objBuilding</object>
     <object>objects\objAllObjects</object>
@@ -103,6 +105,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMenu</room>
+    <room>rooms\rmBillboard</room>
     <room>rooms\Brandonroom</room>
     <room>rooms\hypeRoom</room>
     <room>rooms\room3</room>
