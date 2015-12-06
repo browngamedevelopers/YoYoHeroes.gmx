@@ -102,6 +102,7 @@
     <object>objects\objGas</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmBillboard</room>
     <room>rooms\roomMenu</room>
     <room>rooms\hypeRoom</room>
     <room>rooms\Brandonroom</room>
