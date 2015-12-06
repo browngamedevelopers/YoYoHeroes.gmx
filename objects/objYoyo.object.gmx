@@ -81,6 +81,7 @@ with (player){
 var playerYoyoDistance = distance_to_point(player.x, player.y)
 
 if (playerYoyoDistance &gt;= YOYO_MAX_LENGTH) {
+    show_debug_message("too far");
     returning = true;
 }
 
@@ -100,8 +101,8 @@ if (stick) {
         if (playerYoyoDistance &gt; EPSILON_YOYO_PLAYER) {
             show_debug_message("within");
             var dir = point_direction(x, y, other.x, other.y);
-            phy_speed_x = lengthdir_x(YOYO_SPEED, dir);
-            phy_speed_y = lengthdir_y(YOYO_SPEED, dir);
+            phy_speed_x = lengthdir_x(GOTOYOYO_SPEED, dir);
+            phy_speed_y = lengthdir_y(GOTOYOYO_SPEED, dir);
         } else {
             show_debug_message("notwithin");
             phy_speed_x = 0;
