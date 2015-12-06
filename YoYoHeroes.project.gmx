@@ -98,15 +98,18 @@
     <object>objects\objYoyo</object>
     <object>objects\objNonTargatable</object>
     <object>objects\objGas</object>
+    <object>objects\objPipe</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Hopalong</room>
     <room>rooms\roomMenu</room>
+    <room>rooms\Land_of_Pipes_and_Gas</room>
+    <room>rooms\Beginner</room>
     <room>rooms\Brandonroom</room>
     <room>rooms\hypeRoom</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
     <room>rooms\roomOld</room>
+    <room>rooms\Base_Room</room>
   </rooms>
   <constants number="8">
     <constant name="MAX_FALL_SPEED">25</constant>

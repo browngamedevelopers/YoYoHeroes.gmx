@@ -143,7 +143,9 @@ draw_text(score_x, score_y, "Score: " + string(score));
             <kind>1</kind>
             <string>///Background Movement Code
 player = instance_find(objPlayer,0);
-draw_background_tiled ( background1, view_xview[view_current] - player.x/10 , view_yview[view_current]);
+draw_background_tiled_ext( background1, view_xview[view_current] - player.x/10 
+, view_yview[view_current], view_hview[view_current] /background_height[background1]
+, view_hview[view_current] /background_height[background1], c_white, 1);
 
 </string>
           </argument>
