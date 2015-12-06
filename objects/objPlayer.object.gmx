@@ -155,6 +155,11 @@ if(phy_speed_y &gt; 0){
     imagestart = 1;
     imageend = 1;
 }
+if(phy_speed_y &gt; MAX_FALL_SPEED){
+    phy_speed_y = MAX_FALL_SPEED;
+}
+
+
 if (x &gt; global.farthest){
     score = x;
     global.farthest = x;

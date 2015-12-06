@@ -9,8 +9,8 @@
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>99</bbox_right>
-  <bbox_top>3</bbox_top>
-  <bbox_bottom>109</bbox_bottom>
+  <bbox_top>12</bbox_top>
+  <bbox_bottom>118</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>100</width>
-  <height>110</height>
+  <height>119</height>
   <frames>
     <frame index="0">images\sprYellowPlayer_0.png</frame>
     <frame index="1">images\sprYellowPlayer_1.png</frame>
