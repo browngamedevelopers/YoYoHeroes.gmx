@@ -100,9 +100,10 @@
     <object>objects\objGas</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\hypeRoom</room>
     <room>rooms\room3</room>
-    <room>rooms\room0</room>
     <room>rooms\roomMenu</room>
+    <room>rooms\room0</room>
     <room>rooms\roomOld</room>
   </rooms>
   <constants number="6">
