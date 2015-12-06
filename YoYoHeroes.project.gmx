@@ -90,8 +90,9 @@
     <object>objects\objAllObjects</object>
     <object>objects\objTargetable</object>
     <object>objects\objStatic</object>
-    <object>objects\objBox</object>
     <object>objects\objWall</object>
+    <object>objects\objBox</object>
+    <object>objects\objStaticBox</object>
     <object>objects\objTarget</object>
     <object>objects\objPlayer</object>
     <object>objects\objController</object>
@@ -102,9 +103,9 @@
     <object>objects\objGas</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\hypeRoom</room>
     <room>rooms\rmBillboard</room>
     <room>rooms\roomMenu</room>
-    <room>rooms\hypeRoom</room>
     <room>rooms\Brandonroom</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
