@@ -100,15 +100,16 @@
     <object>objects\objGas</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Hopalong</room>
+    <room>rooms\roomMenu</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
-    <room>rooms\roomMenu</room>
     <room>rooms\roomOld</room>
   </rooms>
   <constants number="6">
     <constant name="PLAYER_JUMP">20</constant>
     <constant name="PLAYER_SPEED">20</constant>
-    <constant name="ROOM_GRAVITY">20</constant>
+    <constant name="ROOM_GRAVITY">15</constant>
     <constant name="EPSILON_YOYO_PLAYER">10</constant>
     <constant name="YOYO_SPEED">40</constant>
     <constant name="YOYO_MAX_LENGTH">500</constant>
