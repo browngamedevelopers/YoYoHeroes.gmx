@@ -28,7 +28,6 @@
             <string>depth = 1;
 image_speed = 0;
 randomize();
-//image_index = irandom(3);
 
 </string>
           </argument>
