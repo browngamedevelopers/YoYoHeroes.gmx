@@ -102,6 +102,7 @@
   <rooms name="rooms">
     <room>rooms\roomMenu</room>
     <room>rooms\Brandonroom</room>
+    <room>rooms\hypeRoom</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
     <room>rooms\roomOld</room>
