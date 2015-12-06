@@ -51,6 +51,7 @@
     <sprite>sprites\sprYoyo</sprite>
     <sprite>sprites\nosprite</sprite>
     <sprite>sprites\sptGas</sprite>
+    <sprite>sprites\sprBlueTarget</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -84,6 +85,7 @@
     </objects>
     <object>objects\objCursor</object>
     <object>objects\objLamp</object>
+    <object>objects\objBlueTarget</object>
     <object>objects\objBlueBlock</object>
     <object>objects\objPost</object>
     <object>objects\objBuilding</object>
@@ -107,6 +109,7 @@
     <room>rooms\rmBillboard</room>
     <room>rooms\roomMenu</room>
     <room>rooms\Brandonroom</room>
+    <room>rooms\hypeRoom</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
     <room>rooms\roomOld</room>
