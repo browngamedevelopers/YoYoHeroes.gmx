@@ -105,10 +105,31 @@ if (!sticking){
     imageend = 1;
 }
 
-        
-var canmove = position_meeting(bbox_right,y + sprite_height/2 + 8,objAllObjects) 
-        || position_meeting(bbox_left,y + sprite_height/2 + 8,objAllObjects)
-        || position_meeting(x,y + sprite_height/2 + 8,objAllObjects) ;
+var below = position_meeting(x,y + sprite_height/2 + 8,objAllObjects);
+var left = position_meeting(bbox_left,y + sprite_height/2 + 8,objAllObjects);
+var right = position_meeting(bbox_right,y + sprite_height/2 + 8,objAllObjects);
+
+var canmove = false;
+
+if (below &amp;&amp; (left || right)) {
+    canmove = true;
+}
+
+if(phy_speed_y &gt; 0.1){
+    //falling
+    imagestart = 7;
+    imageend = 10;
+} else if (phy_speed_y &lt; -0.1){
+    //jumping
+    imagestart = 1;
+    imageend = 1;
+} else {
+    canmove = true;
+}
+
+if(phy_speed_y &gt; MAX_FALL_SPEED){
+    phy_speed_y = MAX_FALL_SPEED;
+}
 
 if(keyboard_check(vk_left) || keyboard_check(ord('A'))){
     image_xscale = -1;
@@ -119,7 +140,7 @@ if(keyboard_check(vk_left) || keyboard_check(ord('A'))){
     }
 }
 if(keyboard_check(vk_right) || keyboard_check(ord('D'))){
-        image_xscale = 1;
+    image_xscale = 1;
     if(canmove){
         imagestart = 1;
         imageend = 7;
@@ -141,25 +162,13 @@ if(canmove){
     if(abs(phy_speed_x) &lt; 1){
        phy_speed_x = 0;
     } else {
-        phy_speed_x -= sign(phy_speed_x)*0.5;
+       //phy_speed_x -= sign(phy_speed_x)*0.7;
+       phy_speed_x *= .9;
     }
 }else {
     //in air
     //show_debug_message("air");
-}
-
-if(phy_speed_y &gt; 0){
-    //falling
-    imagestart = 7;
-    imageend = 10;
-}else if (phy_speed_y &lt;-.1){
-    //jumping
-    imagestart = 1;
-    imageend = 1;
-}
-
-if(phy_speed_y &gt; MAX_FALL_SPEED){
-    phy_speed_y = MAX_FALL_SPEED;
+    friction = 0;
 }
 
 

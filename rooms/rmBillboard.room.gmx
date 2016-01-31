@@ -379,6 +379,7 @@
     <instance objName="objWall" x="2944" y="64" name="inst_6819F325" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWall" x="2336" y="0" name="inst_C270AE55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objShortBeam" x="2336" y="736" name="inst_B62E7126" locked="0" code="depth = 10;&#xA;" scaleX="1.25999999046326" scaleY="1.52131152153015" colour="4294967295" rotation="0"/>
+    <instance objName="objBillboard1" x="2112" y="352" name="inst_191B3844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

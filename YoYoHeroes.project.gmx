@@ -100,6 +100,10 @@
       <object>objects\objTeleCross</object>
       <object>objects\objTelePoleCont</object>
     </objects>
+    <objects name="Billboards">
+      <object>objects\objBillboard0</object>
+      <object>objects\objBillboard1</object>
+    </objects>
     <object>objects\objPointy</object>
     <object>objects\objPipe</object>
     <object>objects\objCursor</object>
