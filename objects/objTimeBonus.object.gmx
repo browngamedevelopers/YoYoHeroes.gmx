@@ -80,7 +80,7 @@ if(image_index &gt;= spritenum + 2){
           <argument>
             <kind>1</kind>
             <string>global.timer += 10;
-room_restart();
+room_goto_next();
 instance_destroy();
 </string>
           </argument>

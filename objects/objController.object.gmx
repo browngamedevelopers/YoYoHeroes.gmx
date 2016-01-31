@@ -90,26 +90,26 @@ if (global.timer &gt;= 0.2) {
     if (global.timer &gt;= 60) {
         if (global.timer &gt;= 600) {
             if ((global.timer mod 60) &gt;= 10) {
-                draw_text(timer_x, timer_y, string(floor(global.timer / 60)) + ":" + string(global.timer mod 60));
+                draw_text(timer_x, timer_y, string(floor(global.timer / 60)) + "." + string(global.timer mod 60));
             } else {
-                draw_text(timer_x, timer_y, string(floor(global.timer / 60)) + ":0" + string(global.timer mod 60));
+                draw_text(timer_x, timer_y, string(floor(global.timer / 60)) + ".0" + string(global.timer mod 60));
             }
         } else {
             if ((global.timer mod 60) &gt;= 10) {
-                draw_text(timer_x, timer_y, "0" + string(floor(global.timer / 60)) + ":" + string(global.timer mod 60));
+                draw_text(timer_x, timer_y, "0" + string(floor(global.timer / 60)) + "." + string(global.timer mod 60));
             } else {
-                draw_text(timer_x, timer_y, "0" + string(floor(global.timer / 60)) + ":0" + string(global.timer mod 60));
+                draw_text(timer_x, timer_y, "0" + string(floor(global.timer / 60)) + ".0" + string(global.timer mod 60));
             }
         }
     } else {
         if ((global.timer mod 60) &gt;= 10) {
-            draw_text(timer_x, timer_y, "00:" + string(global.timer mod 60));
+            draw_text(timer_x, timer_y, "00." + string(global.timer mod 60));
         } else {
-            draw_text(timer_x, timer_y, "00:0" + string(global.timer mod 60));
+            draw_text(timer_x, timer_y, "00.0" + string(global.timer mod 60));
         }
     }
 } else {
-    draw_text(timer_x, timer_y, "00:00.00");
+    draw_text(timer_x, timer_y, "00.00.00");
     draw_set_font(fntGameOver);
     draw_set_color(c_red);
     draw_text(250, 350, "Game Over!");
@@ -143,9 +143,12 @@ draw_text(score_x, score_y, "Score: " + string(score));
             <kind>1</kind>
             <string>///Background Movement Code
 player = instance_find(objPlayer,0);
+if (player == noone){
+player = instance_find(objPlayerDie,0);
+}
 draw_background_tiled_ext( background1, view_xview[view_current] - player.x/10 , 
 view_yview[view_current], view_hview[view_current] /background_height[background1]
-, view_hview[view_current] /background_height[background1], c_white, 1);
+, view_hview[view_current] /background_height[background1], c_white, .85);
 
 //background_yscale[background1] = view_hview[view_current] /background_height[background1]
 //show_debug_message(view_hview[view_current] /background_height[background1]);

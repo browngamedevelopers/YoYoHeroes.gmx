@@ -9,7 +9,7 @@
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>102</bbox_right>
-  <bbox_top>11</bbox_top>
+  <bbox_top>2</bbox_top>
   <bbox_bottom>118</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -30,5 +30,17 @@
     <frame index="7">images\sprGreenPlayer_7.png</frame>
     <frame index="8">images\sprGreenPlayer_8.png</frame>
     <frame index="9">images\sprGreenPlayer_9.png</frame>
+    <frame index="10">images\sprGreenPlayer_10.png</frame>
+    <frame index="11">images\sprGreenPlayer_11.png</frame>
+    <frame index="12">images\sprGreenPlayer_12.png</frame>
+    <frame index="13">images\sprGreenPlayer_13.png</frame>
+    <frame index="14">images\sprGreenPlayer_14.png</frame>
+    <frame index="15">images\sprGreenPlayer_15.png</frame>
+    <frame index="16">images\sprGreenPlayer_16.png</frame>
+    <frame index="17">images\sprGreenPlayer_17.png</frame>
+    <frame index="18">images\sprGreenPlayer_18.png</frame>
+    <frame index="19">images\sprGreenPlayer_19.png</frame>
+    <frame index="20">images\sprGreenPlayer_20.png</frame>
+    <frame index="21">images\sprGreenPlayer_21.png</frame>
   </frames>
 </sprite>

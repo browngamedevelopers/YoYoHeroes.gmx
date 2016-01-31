@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>globalvar farthest;
 global.farthest = x;
+sprite_index = global.playerindex[global.playersprite];
 </string>
           </argument>
         </arguments>
@@ -156,6 +157,7 @@ if(phy_speed_y &gt; 0){
     imagestart = 1;
     imageend = 1;
 }
+
 if(phy_speed_y &gt; MAX_FALL_SPEED){
     phy_speed_y = MAX_FALL_SPEED;
 }
@@ -175,6 +177,20 @@ if(mouse_check_button(mb_left)){
     imagestart = 14;
     imageend = 15;
     shootYoyo(mouse_x, mouse_y);
+}
+phy_rotation = 0;
+if (sticking) {
+    var yoyo = instance_find(objYoyo, 0);
+    var playerYoyoDistance = distance_to_point(yoyo.x, yoyo.y)
+    if (playerYoyoDistance &lt; EPSILON_YOYO_PLAYER) {
+        imagestart = 18;
+        imageend = 22;
+    }else{
+        phy_rotation = 90 -point_direction(x,y,yoyo.x,yoyo.y);
+        show_debug_message(-1*point_direction(x,y,yoyo.x,yoyo.y));
+        imagestart = 10;
+        imageend = 13;
+    }
 }
 image_index = max(imagestart, image_index mod imageend);
 
@@ -205,6 +221,32 @@ image_index = max(imagestart, image_index mod imageend);
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="objDanger">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>show_debug_message("dead!");
+var deadplayer = instance_create(x,y,objPlayerDie);
+view_object[2] = deadplayer;
+instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="objBlueTarget">
       <action>
         <libid>1</libid>
@@ -225,6 +267,22 @@ image_index = max(imagestart, image_index mod imageend);
             <string>Collision</string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>331</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_restart_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="9" enumb="82">

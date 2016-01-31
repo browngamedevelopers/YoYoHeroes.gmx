@@ -1,4 +1,4 @@
-if (!instance_exists(objYoyo)) {
+if (!instance_exists(objYoyo) && !instance_exists(objReturningYoyo)){
     var clickX, clickY;
     clickX = argument0;
     clickY = argument1;

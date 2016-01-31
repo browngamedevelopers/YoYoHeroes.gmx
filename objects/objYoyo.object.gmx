@@ -115,13 +115,15 @@ if (stick) {
 }
 
 if (returning) {
-    if (playerYoyoDistance &lt; EPSILON_YOYO_PLAYER) {
+    instance_create(x,y,objReturningYoyo);
+    instance_destroy();
+    /*if (playerYoyoDistance &lt; EPSILON_YOYO_PLAYER) {
         instance_destroy();
     } else {
         var dir = point_direction(x, y, player.x, player.y);    
         phy_speed_x = lengthdir_x(YOYO_SPEED, dir);
         phy_speed_y = lengthdir_y(YOYO_SPEED, dir);
-    }
+    }*/
     
 }
 

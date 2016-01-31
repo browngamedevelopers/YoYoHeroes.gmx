@@ -27,11 +27,19 @@
   <sprites name="sprites">
     <sprites name="buttons">
       <sprite>sprites\sprMenu</sprite>
+      <sprite>sprites\sprEndGameText</sprite>
       <sprite>sprites\sprButtonPlayGame</sprite>
       <sprite>sprites\sprButtonHowToPlay</sprite>
       <sprite>sprites\sprButtonHighScore</sprite>
       <sprite>sprites\sprButtonPlayerSelect</sprite>
     </sprites>
+    <sprite>sprites\sprTutorial</sprite>
+    <sprite>sprites\sprTargetPlatform</sprite>
+    <sprite>sprites\sprTelePoleCont</sprite>
+    <sprite>sprites\sprTeleCross</sprite>
+    <sprite>sprites\sprTelePoleEnd</sprite>
+    <sprite>sprites\sprShortBeam</sprite>
+    <sprite>sprites\sprLongBeam</sprite>
     <sprite>sprites\sprPipe</sprite>
     <sprite>sprites\sprLamp</sprite>
     <sprite>sprites\sprPost</sprite>
@@ -43,6 +51,7 @@
     <sprite>sprites\sprBlueBlock</sprite>
     <sprite>sprites\sprRope</sprite>
     <sprite>sprites\sprBluePlayer</sprite>
+    <sprite>sprites\sprRedPlayer</sprite>
     <sprite>sprites\sprGreenPlayer</sprite>
     <sprite>sprites\sprYellowPlayer</sprite>
     <sprite>sprites\sprTimeBonus</sprite>
@@ -52,9 +61,11 @@
     <sprite>sprites\nosprite</sprite>
     <sprite>sprites\sptGas</sprite>
     <sprite>sprites\sprBlueTarget</sprite>
+    <sprite>sprites\sprPointy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
+    <background>background\background3</background>
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
@@ -77,14 +88,24 @@
   </fonts>
   <objects name="objects">
     <objects name="buttons">
+      <object>objects\objEndGameText</object>
       <object>objects\objMenu</object>
       <object>objects\objButtonPlayGame</object>
       <object>objects\objButtonPlayerSelect</object>
       <object>objects\objButtonHowToPlay</object>
       <object>objects\objButtonHighScore</object>
     </objects>
+    <objects name="TelePole">
+      <object>objects\objTelePoleEnd</object>
+      <object>objects\objTeleCross</object>
+      <object>objects\objTelePoleCont</object>
+    </objects>
+    <object>objects\objPointy</object>
+    <object>objects\objPipe</object>
     <object>objects\objCursor</object>
     <object>objects\objLamp</object>
+    <object>objects\objLongBeam</object>
+    <object>objects\objShortBeam</object>
     <object>objects\objBlueTarget</object>
     <object>objects\objBlueBlock</object>
     <object>objects\objPost</object>
@@ -97,20 +118,25 @@
     <object>objects\objStaticBox</object>
     <object>objects\objTarget</object>
     <object>objects\objPlayer</object>
+    <object>objects\objPlayerDie</object>
+    <object>objects\objPlayerStill</object>
+    <object>objects\objDanger</object>
     <object>objects\objController</object>
     <object>objects\objTimeBonus</object>
     <object>objects\objCloud</object>
     <object>objects\objYoyo</object>
+    <object>objects\objReturningYoyo</object>
     <object>objects\objNonTargatable</object>
     <object>objects\objGas</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMenu</room>
     <room>rooms\Beginner</room>
-    <room>rooms\hypeRoom</room>
     <room>rooms\rmBillboard</room>
     <room>rooms\Brandonroom</room>
     <room>rooms\hypeRoom</room>
+    <room>rooms\roomEnd</room>
+    <room>rooms\LongRoom</room>
     <room>rooms\room3</room>
     <room>rooms\room0</room>
     <room>rooms\roomOld</room>

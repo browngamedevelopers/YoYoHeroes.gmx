@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
-cursor_sprite = nosprite;
+window_set_cursor(cr_none);
+depth = -50;
 </string>
           </argument>
         </arguments>
