@@ -155,11 +155,6 @@
     <instance objName="objWall" x="192" y="224" name="inst_650DB2BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWall" x="192" y="192" name="inst_C5D3581C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWall" x="192" y="160" name="inst_8B112E93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBox" x="608" y="320" name="inst_52F35E67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBox" x="288" y="160" name="inst_D63239C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBox" x="448" y="544" name="inst_ECF8F3B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBox" x="832" y="544" name="inst_393DE192" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objBox" x="160" y="608" name="inst_9112B146" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTarget" x="208" y="192" name="inst_A94FB3D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="objTarget" x="560" y="432" name="inst_32C4F8F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTarget" x="240" y="304" name="inst_16F982C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
