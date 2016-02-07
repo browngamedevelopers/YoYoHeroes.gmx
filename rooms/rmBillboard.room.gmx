@@ -375,7 +375,6 @@
     <instance objName="objWall" x="2944" y="64" name="inst_6819F325" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWall" x="2336" y="0" name="inst_C270AE55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objShortBeam" x="2336" y="736" name="inst_B62E7126" locked="0" code="depth = 10;&#xA;" scaleX="1.25999999046326" scaleY="1.52131152153015" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="2112" y="352" name="inst_191B3844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPipe" x="2304" y="544" name="inst_CD7A3634" locked="0" code="depth = 14;&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objClothesline1" x="2944" y="576" name="inst_B8BEC524" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objClothesline2" x="2944" y="320" name="inst_5EFBF4DC" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
