@@ -28,7 +28,7 @@
             <string>globalvar farthest;
 global.farthest = x;
 sprite_index = global.playerindex[global.playersprite];
-var movingdown;
+movingdown = true;
 </string>
           </argument>
         </arguments>
@@ -111,7 +111,6 @@ var left = position_meeting(bbox_left,y + sprite_height/2 + 8,objAllObjects);
 var right = position_meeting(bbox_right,y + sprite_height/2 + 8,objAllObjects);
 
 var canmove = false;
-var movingdown = true;
 
 if (below &amp;&amp; (left || right)) {
     canmove = true;
@@ -126,12 +125,10 @@ if(phy_speed_y &gt; 0){
     //jumping
     imagestart = 1;
     imageend = 1;
-    wasmovingup = true;
     movingdown = false;
 } else {
     if(movingdown) {
         canmove = true;
-        movingdown = false;
     }
 }
 
