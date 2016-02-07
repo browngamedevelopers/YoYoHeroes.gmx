@@ -110,21 +110,28 @@ var left = position_meeting(bbox_left,y + sprite_height/2 + 8,objAllObjects);
 var right = position_meeting(bbox_right,y + sprite_height/2 + 8,objAllObjects);
 
 var canmove = false;
+var movingdown = false;
 
 if (below &amp;&amp; (left || right)) {
     canmove = true;
 }
 
-if(phy_speed_y &gt; 0.1){
+if(phy_speed_y &gt; 0){
     //falling
     imagestart = 7;
     imageend = 10;
-} else if (phy_speed_y &lt; -0.1){
+    movingdown = true;
+} else if (phy_speed_y &lt; 0){
     //jumping
     imagestart = 1;
     imageend = 1;
+    wasmovingup = true;
+    movingdown = false;
 } else {
-    canmove = true;
+    if(movingdown) {
+        canmove = true;
+        movingdown = false;
+    }
 }
 
 if(phy_speed_y &gt; MAX_FALL_SPEED){
