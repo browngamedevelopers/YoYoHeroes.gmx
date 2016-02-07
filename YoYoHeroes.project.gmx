@@ -48,6 +48,7 @@
     <sprite>sprites\sprBuilding</sprite>
     <sprite>sprites\sprBox</sprite>
     <sprite>sprites\sprTarget</sprite>
+    <sprite>sprites\sprBillboard</sprite>
     <sprite>sprites\sprPlayer2</sprite>
     <sprite>sprites\sprWall</sprite>
     <sprite>sprites\sprRope</sprite>
