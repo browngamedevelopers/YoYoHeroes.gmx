@@ -27,46 +27,58 @@
     <sound>sound\musicBackground</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="buttons">
+    <sprites name="menu">
       <sprite>sprites\sprMenu</sprite>
+      <sprite>sprites\sprEndMenu</sprite>
       <sprite>sprites\sprEndGameText</sprite>
-      <sprite>sprites\sprButtonPlayGame</sprite>
-      <sprite>sprites\sprButtonHowToPlay</sprite>
-      <sprite>sprites\sprButtonHighScore</sprite>
-      <sprite>sprites\sprButtonPlayerSelect</sprite>
+      <sprite>sprites\sprHowToPlay</sprite>
+      <sprite>sprites\sprTutorial</sprite>
     </sprites>
-    <sprite>sprites\sprBGDBillboard</sprite>
-    <sprite>sprites\sprClothesline3</sprite>
-    <sprite>sprites\sprClothesline2</sprite>
-    <sprite>sprites\sprTutorial</sprite>
-    <sprite>sprites\sprTargetPlatform</sprite>
-    <sprite>sprites\sprTelePoleCont</sprite>
-    <sprite>sprites\sprTeleCross</sprite>
-    <sprite>sprites\sprTelePoleEnd</sprite>
-    <sprite>sprites\sprShortBeam</sprite>
-    <sprite>sprites\sprLongBeam</sprite>
-    <sprite>sprites\sprPipe</sprite>
-    <sprite>sprites\sprLamp</sprite>
-    <sprite>sprites\sprPost</sprite>
-    <sprite>sprites\sprBuilding</sprite>
-    <sprite>sprites\sprBox</sprite>
-    <sprite>sprites\sprTarget</sprite>
-    <sprite>sprites\sprBillboard</sprite>
-    <sprite>sprites\sprPlayer2</sprite>
-    <sprite>sprites\sprWall</sprite>
-    <sprite>sprites\sprRope</sprite>
-    <sprite>sprites\sprBluePlayer</sprite>
-    <sprite>sprites\sprRedPlayer</sprite>
-    <sprite>sprites\sprGreenPlayer</sprite>
-    <sprite>sprites\sprYellowPlayer</sprite>
-    <sprite>sprites\sprTimeBonus</sprite>
-    <sprite>sprites\sprCrosshair</sprite>
-    <sprite>sprites\sprCloud</sprite>
-    <sprite>sprites\sprYoyo</sprite>
-    <sprite>sprites\nosprite</sprite>
-    <sprite>sprites\sptGas</sprite>
-    <sprite>sprites\sprPointy</sprite>
-    <sprite>sprites\sprClothesline1</sprite>
+    <sprites name="targetable">
+      <sprite>sprites\sprTarget</sprite>
+      <sprite>sprites\sprTargetPlatform</sprite>
+      <sprite>sprites\sprTeleCross</sprite>
+      <sprite>sprites\sprBox</sprite>
+      <sprite>sprites\sprLamp</sprite>
+      <sprite>sprites\sprShortBeam</sprite>
+      <sprite>sprites\sprLongBeam</sprite>
+      <sprites name="clotheslines">
+        <sprite>sprites\sprClothesline1</sprite>
+        <sprite>sprites\sprClothesline2</sprite>
+        <sprite>sprites\sprClothesline3</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="nontargetable">
+      <sprite>sprites\sprTelePoleCont</sprite>
+      <sprite>sprites\sprTelePoleEnd</sprite>
+      <sprites name="environment">
+        <sprite>sprites\sprBuilding</sprite>
+        <sprite>sprites\sprWall</sprite>
+        <sprite>sprites\sprPost</sprite>
+        <sprites name="billboards">
+          <sprite>sprites\sprBillboard</sprite>
+          <sprite>sprites\sprBGDBillboard</sprite>
+        </sprites>
+        <sprites name="danger">
+          <sprite>sprites\sprPointy</sprite>
+          <sprite>sprites\sprPipe</sprite>
+          <sprite>sprites\sprCloud</sprite>
+          <sprite>sprites\sptGas</sprite>
+        </sprites>
+      </sprites>
+    </sprites>
+    <sprites name="player">
+      <sprite>sprites\sprCrosshair</sprite>
+      <sprite>sprites\sprBluePlayer</sprite>
+      <sprite>sprites\sprRedPlayer</sprite>
+      <sprite>sprites\sprGreenPlayer</sprite>
+      <sprite>sprites\sprYellowPlayer</sprite>
+      <sprite>sprites\sprRope</sprite>
+      <sprite>sprites\sprYoyo</sprite>
+    </sprites>
+    <sprites name="time">
+      <sprite>sprites\sprTimeBonus</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -92,59 +104,79 @@
     <font>fonts\fntGameOver</font>
   </fonts>
   <objects name="objects">
-    <objects name="buttons">
-      <object>objects\objEndGameText</object>
-      <object>objects\objMenu</object>
-      <object>objects\objButtonPlayGame</object>
-      <object>objects\objButtonPlayerSelect</object>
-      <object>objects\objButtonHowToPlay</object>
-      <object>objects\objButtonHighScore</object>
-    </objects>
-    <objects name="TelePole">
-      <object>objects\objTelePoleEnd</object>
-      <object>objects\objTeleCross</object>
-      <object>objects\objTelePoleCont</object>
-    </objects>
-    <object>objects\objBGDBillboard</object>
-    <object>objects\objClothesline3</object>
-    <object>objects\objClothesline1</object>
-    <object>objects\objClothesline2</object>
-    <object>objects\objPointy</object>
-    <object>objects\objPipe</object>
-    <object>objects\objCursor</object>
-    <object>objects\objLamp</object>
-    <object>objects\objLongBeam</object>
-    <object>objects\objShortBeam</object>
-    <object>objects\objPost</object>
-    <object>objects\objBuilding</object>
     <object>objects\objAllObjects</object>
-    <object>objects\objTargetable</object>
-    <object>objects\objStatic</object>
-    <object>objects\objWall</object>
-    <object>objects\objTarget</object>
-    <object>objects\objPlayer</object>
-    <object>objects\objPlayerDie</object>
-    <object>objects\objPlayerStill</object>
-    <object>objects\objDanger</object>
-    <object>objects\objController</object>
-    <object>objects\objTimeBonus</object>
-    <object>objects\objCloud</object>
-    <object>objects\objYoyo</object>
-    <object>objects\objReturningYoyo</object>
-    <object>objects\objNonTargatable</object>
-    <object>objects\objGas</object>
+    <objects name="menu">
+      <object>objects\objMenu</object>
+      <object>objects\objEndMenu</object>
+      <object>objects\objEndGameText</object>
+      <object>objects\objHowToPlay</object>
+    </objects>
+    <objects name="targetable">
+      <object>objects\objTargetable</object>
+      <object>objects\objTarget</object>
+      <object>objects\objTeleCross</object>
+      <object>objects\objLamp</object>
+      <object>objects\objShortBeam</object>
+      <object>objects\objLongBeam</object>
+      <objects name="clotheslines">
+        <object>objects\objClothesline1</object>
+        <object>objects\objClothesline2</object>
+        <object>objects\objClothesline3</object>
+      </objects>
+    </objects>
+    <objects name="nontargetable">
+      <object>objects\objNonTargatable</object>
+      <object>objects\objTelePoleEnd</object>
+      <object>objects\objTelePoleCont</object>
+      <objects name="environment">
+        <object>objects\objStatic</object>
+        <object>objects\objWall</object>
+        <object>objects\objPost</object>
+        <object>objects\objBuilding</object>
+        <objects name="billboards">
+          <object>objects\objBillboard0</object>
+          <object>objects\objBillboard1</object>
+          <object>objects\objBGDBillboard</object>
+        </objects>
+        <objects name="danger">
+          <object>objects\objDanger</object>
+          <object>objects\objPipe</object>
+          <object>objects\objPointy</object>
+          <object>objects\objCloud</object>
+          <object>objects\objGas</object>
+        </objects>
+      </objects>
+    </objects>
+    <objects name="player">
+      <object>objects\objPlayer</object>
+      <object>objects\objController</object>
+      <object>objects\objCursor</object>
+      <object>objects\objPlayerDie</object>
+      <object>objects\objPlayerStill</object>
+      <objects name="yoyo">
+        <object>objects\objYoyo</object>
+        <object>objects\objReturningYoyo</object>
+      </objects>
+    </objects>
+    <objects name="time">
+      <object>objects\objTimeBonus</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\roomMenu</room>
-    <room>rooms\Beginner</room>
-    <room>rooms\rmBillboard</room>
-    <room>rooms\Brandonroom</room>
-    <room>rooms\roomEnd</room>
-    <room>rooms\hypeRoom</room>
-    <room>rooms\LongRoom</room>
-    <room>rooms\room3</room>
-    <room>rooms\room0</room>
-    <room>rooms\roomOld</room>
+    <rooms name="In game rooms">
+      <room>rooms\roomMenu</room>
+      <room>rooms\Beginner</room>
+      <room>rooms\rmBillboard</room>
+      <room>rooms\Brandonroom</room>
+      <room>rooms\roomEnd</room>
+    </rooms>
+    <rooms name="Old rooms">
+      <room>rooms\hypeRoom</room>
+      <room>rooms\LongRoom</room>
+      <room>rooms\room3</room>
+      <room>rooms\room0</room>
+      <room>rooms\roomOld</room>
+    </rooms>
   </rooms>
   <constants number="8">
     <constant name="MAX_FALL_SPEED">25</constant>

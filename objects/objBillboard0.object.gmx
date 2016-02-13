@@ -3,7 +3,7 @@
   <spriteName>sprBillboard</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>str = "Try letting go of the mouse while swinging";
+            <string>str = "Momentum   is   your   friend"
 </string>
           </argument>
         </arguments>
@@ -50,7 +50,9 @@
             <kind>1</kind>
             <string>draw_self();
 draw_set_halign(fa_center);
-draw_text_ext(x, y, str, 35, 300);
+draw_set_valign(fa_center);
+draw_set_colour(make_colour_rgb(0, 0, 100));
+draw_text_ext(x, y-10, str, 45, 350);
 </string>
           </argument>
         </arguments>

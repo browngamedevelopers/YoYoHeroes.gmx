@@ -53,6 +53,7 @@
   <instances>
     <instance objName="objEndGameText" x="256" y="64" name="inst_8E7A23F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBGDBillboard" x="528" y="352" name="inst_42ED8384" locked="0" code="" scaleX="0.800000011920929" scaleY="0.800000011920929" colour="4294967295" rotation="0"/>
+    <instance objName="objEndMenu" x="560" y="32" name="inst_DD23C667" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
